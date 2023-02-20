@@ -1,0 +1,7 @@
+{
+  "name": "zztop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
