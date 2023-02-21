@@ -1,20 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+<ion-list>
+  <ion-item>
+    <ion-label position="floating">decimal</ion-label>
+    <ion-input [clearInput]="true" [(ngModel)]="entity.decimal" type="number" inputmode="decimal"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">numeric</ion-label>
+    <ion-input [clearInput]="true"  [(ngModel)]="entity.numeric"type="number" inputmode="numeric"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">pr-BR</ion-label>
+    <ion-input [clearInput]="true" [(ngModel)]="entity.prBR" type="number" attr.lang="pr-BR"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">en-US</ion-label>
+    <ion-input [clearInput]="true" [(ngModel)]="entity.enUS" type="number" attr.lang="en-US"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">decimal pr-BR</ion-label>
+    <ion-input [clearInput]="true" [(ngModel)]="entity.decimal_pr_BR" type="number" inputmode="decimal" attr.lang="pr-BR"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">numeric en-US</ion-label>
+    <ion-input [clearInput]="true" [(ngModel)]="entity.numeric_en_US" type="number" inputmode="numeric" attr.lang="en-US"></ion-input>
+  </ion-item>
+</ion-list>
+<ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+  Click me
+</ion-button>
