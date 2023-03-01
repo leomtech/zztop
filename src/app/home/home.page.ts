@@ -1,22 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html'
 })
-export class HomePage {
+export class HomePage implements OnInit {
   constructor() {}
+  ngOnInit(): void {
+    this.onChange();
+  }
+  
+  lang = 'fr-FR';
 
-  entity = {
-    decimal: 0,
-    numeric: 0,
-    prBR: 0,
-    enUS: 0,
-    decimal_pr_BR: 0,
-    numeric_en_US: 0
-  };
+  entity = { prop1: 0, prop2: 0, prop3: 1.234};
 
-  onClick() {
-    console.log(JSON.stringify(this.entity))
+  jsonEntity = "";
+
+  onChange() {
+    this.jsonEntity = JSON.stringify(this.entity)
   }
 }
