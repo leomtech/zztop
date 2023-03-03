@@ -28,12 +28,18 @@
     </ion-item>
 
     <ion-item>
+      <ion-label position="floating">Type Tel Pipe</ion-label>
+      <ion-input type="tel" [ngModel]="entity.prop2 | number:'':lang" (ngModelChange)="entity.prop2=$event" (ionChange)="onChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
       <ion-label position="floating">Type Text</ion-label>
       <ion-input type="text" [ngModel]="entity.prop3 | number:'':lang" (ngModelChange)="entity.prop3=$event" (ionChange)="onChange()"></ion-input>
     </ion-item>
   </ion-list>
 
-  {{ .25*entity.prop3 }}
+  prop2: {{ .25*entity.prop2 }} <br>
+  prop3: {{ .25*entity.prop3 }} <br>
   <br>
   <ion-label> {{ lang }} </ion-label>
   <br>
